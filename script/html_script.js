@@ -56,7 +56,7 @@ function renderMain() {
         mainHtml += `
                 <div class="category-section" id="${category}">
                     <h2 class="category-title">${category}</h2>
-                    <div class="items-grid">
+                    <div class="items-flex">
             `;
 
         let dishes = menu[category];
