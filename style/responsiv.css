@@ -36,6 +36,18 @@
     }
 }
 
+@media (max-width: 716px) {
+    html {
+        scroll-padding-top: 190px;
+    }
+}
+
+@media (max-width: 683px) {
+    .cart-header-responsiv-section {
+        max-width: 90%;
+    }
+}
+
 @media (max-width: 575px) {
     .restaurant-info-details {
         flex-direction: column;
@@ -64,8 +76,14 @@
     }
 }
 
-@media (max-width: 683px) {
-    .cart-header-responsiv-section {
-        max-width: 90%;
+@media (max-width: 411px) {
+    html {
+        scroll-padding-top: 175px;
+    }
+}
+
+@media (max-width: 353px) {
+    html {
+        scroll-padding-top: 225px !important;
     }
 }
