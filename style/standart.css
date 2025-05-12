@@ -26,11 +26,13 @@ footer {
     background-color: #F5F3F1;
     padding: 16px;
     z-index: -1;
+    position: relative;
 }
 
 footer img{
     filter: brightness(0) saturate(100%) invert(51%) sepia(89%) saturate(2139%) hue-rotate(0deg) brightness(103%) contrast(105%);
     width: 20vh;
+
 }
 
 :root {

@@ -36,18 +36,11 @@
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 575px) {
     .restaurant-info-details {
         flex-direction: column;
         gap:4px;
     }
-}
-
-@media (max-width: 575px) {
-    .about-us {
-        display: none;
-    }
-
 }
 
 @media (max-width: 411px) {
@@ -59,6 +52,15 @@
     }
     :root  {
         font-size: 16px;
+    }
+    .restaurant-details h1 {
+        font-size: 28px;
+    }
+    .categories h3 {
+        font-size: 20px !important;
+    }
+    .category-title {
+        font-size: 20px !important;
     }
 }
 

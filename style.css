@@ -51,32 +51,6 @@ body.noscroll {
     object-fit: cover;
 }   
 
-.about-us {
-    background-color: #F5F3F1;
-    padding: 8px;
-    border-radius: 8px;
-    border: 1px solid var(--medium-gray);
-}
-
-.about-us img {
-    width: 20px;
-    height: 20px;
-}
-
-.about-us a {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    height: 100%;
-}
-
-.about-us a:hover {
-    color: var(--primary-color);
-}
-
 .restaurant-image {
     position: relative;
 }
@@ -95,11 +69,12 @@ body.noscroll {
 .restaurant-info-details {
     display: flex;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .restaurant-details {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 36px;
     align-items: flex-start;
     padding: 16px;
@@ -240,10 +215,7 @@ main {
 
 .cart-contents {
     overflow-y: auto;
-}
-
-.scrollbar {
-    height: 77vh;
+    max-height: 77vh;
 }
 
 .close-cart {
@@ -297,7 +269,6 @@ main {
     background-color: white;
     border-top: 1px solid var(--medium-gray);
 }
-
 
 .responsiv-cart-total {
     position: sticky;

@@ -30,10 +30,6 @@ function renderMain() {
                     </div>
                 </div>   
             </div>
-            <div class="about-us">
-                <a href="'"><img src="assets/icon/icons8-info-50.png" alt="">
-                <span>Über uns</span></a>
-            </div>
         </div> 
         <div class="opening-hours">
             <span>Dieses Restaurant hat 24 Stunden geöffnet.</span>
