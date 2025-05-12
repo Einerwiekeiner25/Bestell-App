@@ -1,13 +1,17 @@
+body.noscroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 
-
-html {
-    scroll-padding-top: 128px;
-}
-
-header {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    z-index: 100;
+.restaurant-details,
+.menu-items,
+.category-section{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 16px;
+    width: 100%;
 }
 
 .top-bar {
@@ -18,12 +22,11 @@ header {
     border-bottom: 1px solid var(--medium-gray);
 }
 
-.logo {
-    font-weight: bold;
-    font-size: 24px;
-    color: var(--primary-color);
+.top-bar img {
+    width: 128px;
+    filter: brightness(0) saturate(100%) invert(51%) sepia(89%) saturate(2139%) hue-rotate(0deg) brightness(103%) contrast(105%);
+    object-fit: cover;
 }
-
 
 .cart-button {
     position: fixed;
@@ -40,7 +43,7 @@ header {
     cursor: pointer;
 }
 
-.restaurant-header img{
+.restaurant-header img {
     object-fit: cover;
     height: 35vh;
     width: 100%;
@@ -57,7 +60,7 @@ header {
     border: 1px solid var(--medium-gray);
 }
 
-.about-us img{
+.about-us img {
     width: 20px;
     height: 20px;
 }
@@ -91,7 +94,7 @@ header {
     top: 30%;   
 }
 
-.restaurant-info-details{
+.restaurant-info-details {
     display: flex;
     gap: 16px;
 }
@@ -147,23 +150,26 @@ main {
     box-sizing: border-box;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
     background-color: #F5F3F1;
-    margin-bottom: 16px!important;
     text-align: center;
-    margin-bottom: 16px;
-
+    padding: 16px;
+    margin: 0 8px;
 }
 
 .categories {
     background-color: white;
     border-radius: 8px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     padding: 16px;
-    margin-bottom: 16px;
     text-align: center;
     position: sticky;
     top: 0;
-    z-index: 10
+    z-index: 10;
+    margin: 0 8px;
 }
 
 .categories h3 {
@@ -175,7 +181,6 @@ main {
 .category-list {
     display: flex;
     justify-content: center;
-
     flex-wrap: wrap;
     gap: 8px;
 }
@@ -196,10 +201,6 @@ main {
 
 .menu-items {
     flex: 1;
-}
-
-.category-section {
-    margin-bottom: 30px;
 }
 
 .category-title {
@@ -269,24 +270,10 @@ main {
     align-items: center;
 }
 
-.add-button {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
-}
-
 .shopping-cart-panel {
     position: sticky;
-    top: 0;
-    height: 100vh;
+    top: 8px;
+    height: 99vh;
     background-color: white;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
     padding: 16px;
@@ -298,6 +285,14 @@ main {
     align-items: center;
     padding-bottom: 10px;
     border-bottom: 1px solid var(--medium-gray);
+}
+
+.cart-contents {
+    overflow-y: auto;
+}
+
+.scrollbar {
+    height: 77vh;
 }
 
 .close-cart {
@@ -314,11 +309,11 @@ main {
 
 .shopping-cart-item {
     display: flex;
-    padding: 16px 0;
+    padding: 16px 8px;
     border-bottom: 1px solid var(--light-gray);
 }
 
-.responsive-shopping-cart{
+.responsive-shopping-cart {
     text-align: center;
     padding: 16px;
 }
@@ -342,18 +337,6 @@ main {
     gap: 5px;
 }
 
-.quantity-button {
-    width: 20px;
-    height: 20px;
-    background-color: var(--light-gray);
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
 .cart-total {
     position: absolute;
     bottom: 0;
@@ -365,7 +348,7 @@ main {
 }
 
 
-.responsiv-cart-total{
+.responsiv-cart-total {
     position: sticky;
     padding: 16px;
     background-color: white;
@@ -373,7 +356,7 @@ main {
     border-radius: 25px;
 }
 
-.bold{
+.bold {
     font-weight: bold;
 }
 
@@ -381,50 +364,6 @@ main {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-}
-
-.checkout-button {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 4px;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 16px;
-    
-}
-
-@media (max-width: 575px) {
-    .about-us {
-        display: none;
-    }
-}
-
-@media (max-width: 792px) {
-    .restaurant-info-details {
-        flex-direction: column;
-        gap:4px;
-    }
-}
-
-@media (max-width: 411px) {
-    main {
-        text-align: center;
-    }
-}
-
-
-.restaurant-details,
-.opening-hours,
-.menu-items,
-.category-section{
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 16px;
-    width: 100%;
 }
 
 .wrapper {
@@ -438,7 +377,7 @@ main {
 
 .cart {
     width: 350px;
-    padding: 16px 16px 16px 0;
+    padding: 16px 8px 16px 0;
 }
 
 .background-shopping-cart{
@@ -450,55 +389,30 @@ main {
     padding: 36px;
 }
 
-@media (max-width: 1440px) {
-    .cart {
-        display: none;
-    }
-    .content{
-        width: 100%;
-    }
-}
-
-@media (min-width: 1441px) {
-    .background-shopping-cart{
-        display:none;
-    }
-    .cart-button{
-        display: none;
-    }
-    .shopping-cart-responsiv-menu-section{
-        display: none;
-    }
-}
-
-
-footer {
-    background-color: #6e4d2b;
-    height: 500px;
-}
-
-.shopping-cart-responsiv-menu-section {
+.shopping-cart-panel-responsiv {
     position: fixed;
     top:0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.452);
-    z-index: 100000;
+    z-index: 1000;
 }
 
-.shopping-cart-responsiv-menu {
+.cart-header-responsiv-section {
     padding: 16px;
-    margin: 0 auto;
-    margin-top: 20vh;
-    width: 90%;
+    margin: 25vh auto;
+    max-width: 50vh;
     border-radius: 25px;
     background-color: #F5F3F1;
 }
 
-.test1 {
+.cart-header-responsiv {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.test2 {
-    display: flex;
+.test-checkout {
+    padding-top: 16px;
+    text-align: center;
 }

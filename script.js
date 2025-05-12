@@ -52,15 +52,12 @@ function updateCartCount() {
 }
 
 
-function toogleCartResponsiv() {
-    let shoppingCartResponsivMenuSection = document.getElementById("shopping-cart-responsiv-menu-section")
-    shoppingCartResponsivMenuSection.classList.toggle("d-none")
+function toggleCartResponsiv() {
+    let cartRef = document.getElementById("shopping-cart-responsiv")
+    cartRef.classList.toggle("d-none")
 }
 
-function Eventbubbling() {
-    
-}
-
-function countDishesCartResponsiv() {
-    
-}
+document.getElementById("cart-header-responsiv-section").addEventListener("click", function(event) {
+    event.stopPropagation();
+  });
+  

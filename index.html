@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style/standart.css">
+    <link rel="stylesheet" href="style/button.css">
+    <link rel="stylesheet" href="style/responsiv.css">
     <title>Ristorante Bella Italia - Speisekarte</title>
 </head>
 <body>
 
     <header id="header">
         <div class="top-bar">
-            <div class="logo">FoodDelivery</div>
-            </div>
+            <img src="assets/Logo/Bestell App- Logo.svg"></img>
         </div>
         
         <div class="restaurant-header">
@@ -37,7 +38,7 @@
 
             <div class="cart-contents" id="cart-content"></div>
 
-            <div class="cart-total">
+            <div class="cart-total" id="cart-total">
                 <div class="total-row">
                     <span>Zwischensumme</span>
                     <span id="result">0,00 €</span>
@@ -50,29 +51,28 @@
                     <span>Gesamt</span>
                     <span id="total">3,50 €</span>
                 </div>
-                <button class="checkout-button">Zur Kasse</button>
+                <button class="checkout-button" onclick="pressCheckout()">Zur Kasse</button>
             </div>
-        </div>
-
-        <div>
-            <h2>Warenkorb</h2>
         </div>
 
        </section>
     </section>
 
     <section>
-        <div class="shopping-cart-responsiv-menu-section d-none" id="shopping-cart-responsiv-menu-section">
-            <div class="shopping-cart-responsiv-menu">
-                <div class="test1"><h2>Warenkorb</h2>
-                <p class="test2" onclick="toogleCartResponsiv()"><button>x</button></p>
+        <div class="shopping-cart-panel-responsiv d-none" id="shopping-cart-responsiv" onclick="toggleCartResponsiv()">
+            <div class="cart-header-responsiv-section" id="cart-header-responsiv-section">
+                <div class="cart-header-responsiv"><h2>Warenkorb</h2>
+                <p onclick="toggleCartResponsiv()">
+                    <button class="add-button">x</button>
+                </p>
             </div>
-            <div class="cart-contents" id="cart-content-responsiv"></div>
 
-            <div class="responsiv-cart-total">
+            <div class="cart-contents scrollbar" id="cart-content-responsiv"></div>
+
+            <div class="responsiv-cart-total" id="responsiv-cart-total">
                 <div class="total-row">
                     <span>Zwischensumme</span>
-                    <span id="result">0,00 €</span>
+                    <span id="result-responsiv">0,00 €</span>
                 </div>
                 <div class="total-row">
                     <span>Liefergebühr</span>
@@ -80,16 +80,16 @@
                 </div>
                 <div class="total-row bold">
                     <span>Gesamt</span>
-                    <span id="total">3,50 €</span>
+                    <span id="total-responsiv">3,50 €</span>
                 </div>
-                <button class="checkout-button">Zur Kasse</button>
+                <button class="checkout-button" onclick="pressCheckout()">Zur Kasse</button>
             </div>
         </div>
         </div>
     </section>
 
     <footer id="footer">
-        <div></div>
+        <img src="assets/Logo/Logo.png"></img>
     </footer>
     
     <script src="script/db.js"></script>

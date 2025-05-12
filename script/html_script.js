@@ -1,7 +1,6 @@
 
 
 let mainRef = document.getElementById("main");
-let shoppingCartPanelRef = document.getElementById("shopping-cart-panel");
 let cartContentRef = document.getElementById("cart-content");
 let cartContentResponsivRef = document.getElementById("cart-content-responsiv")
 let countsCartRef = document.getElementById("counts-cart")
@@ -19,8 +18,6 @@ function renderMain() {
                     <div>
                         <span class="star">★ 4.7</span>
                         <span>(324)</span>
-                    </div>
-                    <div>
                         <span>Italienisch</span>
                     </div>
                     <div>
@@ -89,7 +86,7 @@ function renderMain() {
 
     mainHtml += `
             <div class="background-shopping-cart">          
-                <div class="cart-button" id="cart-button" onclick="toogleCartResponsiv()">
+                <div class="cart-button" id="cart-button" onclick="toggleCartResponsiv()">
                     <span>Warenkorb</span>
                     <span id="counts-cart" onload="renderResponsivCart()"> 0 </span>
                 </div>
@@ -127,9 +124,46 @@ function renderCart() {
             }
         }
     }
-    
+
     cartContentRef.innerHTML = cartContentHTML;
-    cartContentResponsivRef.innerHTML = cartContentHTML
+    cartContentResponsivRef.innerHTML = cartContentHTML;
     document.getElementById('result').textContent = subTotal.toFixed(2) + ' €';
     document.getElementById('total').textContent = (subTotal + deliverFee).toFixed(2) + ' €';
+    document.getElementById('result-responsiv').textContent = subTotal.toFixed(2) + ' €';
+    document.getElementById('total-responsiv').textContent = (subTotal + deliverFee).toFixed(2) + ' €';
 }
+
+function pressCheckout() {
+    let filledShoppingCart = false;
+    for (let category in menu) {
+        for (let dish of menu[category]) {
+            if (dish.amount > 0) {
+                filledShoppingCart = true;
+                break;
+            }
+        }
+        if (filledShoppingCart) break;
+    }
+
+    if (filledShoppingCart === false) return;
+
+    let cartContentHTML = '';
+
+    cartContentHTML += `
+                <div
+                <p class="test-checkout">Testbestellung wurde vorgenommen!</p>
+                </div>`
+    
+    for (let category in menu) {
+        for (let dish of menu[category]) {
+            dish.amount = 0;
+        }
+    }
+    renderCart();
+    cartContentRef.innerHTML = cartContentHTML;
+    cartContentResponsivRef.innerHTML = cartContentHTML;
+
+    setTimeout(() => {
+        renderCart();
+    }, 10000);
+} 
