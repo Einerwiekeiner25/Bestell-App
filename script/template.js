@@ -241,7 +241,7 @@ function menuItemsHtml(dish) {
 function divForMainHtml() {
     return `
         </div>
-    </div>`;
+    </div>`; 
 }
 
 function backgroundShoppingCartHtml() {

@@ -88,16 +88,3 @@
         scroll-padding-top: 225px !important;
     }
 }
-
-
-@media (max-height: 1080px) and (min-width: 1101px) {
-    .cart-contents {
-        max-height: 795px;
-    }
-}
-
-@media (max-height: 720px) and (min-width: 1101px) {
-    .cart-contents {
-        max-height: 439px;
-    }
-}

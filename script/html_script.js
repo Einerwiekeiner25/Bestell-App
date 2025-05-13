@@ -6,19 +6,15 @@ const deliverFee = 3.50;
 
 function renderMain() {
     let html = '';
-
     html += restaurantDetailsHtml()
     for (let category in menu) {
         html += categorySectionHtml(category)
-
         let dishes = menu[category];
         for (let dish of dishes) {
             html += menuItemsHtml(dish)
         }
-
         html += divForMainHtml()
     }
-
     html += backgroundShoppingCartHtml()            
     mainRef.innerHTML = html;
 }
@@ -36,9 +32,8 @@ function renderCart() {
 
 function pressCheckout() {
     if (!filledShoppingCart()) return;
-    
-    let cartContentHTML = '';
 
+    let cartContentHTML = '';
     cartContentHTML += testCheckoutHtml()
     
     for (let category in menu) {

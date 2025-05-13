@@ -57,7 +57,6 @@ function buildCartContent() {
             }
         }
     }
-
     return {cartContentHTML, subTotal};
 }
 
