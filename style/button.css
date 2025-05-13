@@ -37,3 +37,18 @@
     cursor: pointer;
     margin-top: 16px;
 }
+
+.cart-button {
+    position: fixed;
+    bottom: 3vh;
+    left: 16px;
+    right: 16px;
+    background-color: var(--primary-color);
+    color: white !important;
+    padding: 12px;
+    margin: 0 16px;
+    border-radius: 25px;
+    text-align: center;
+    z-index: 1000;
+    cursor: pointer;
+}

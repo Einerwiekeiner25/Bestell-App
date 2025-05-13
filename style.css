@@ -26,30 +26,11 @@ body.noscroll {
     object-fit: cover;
 }
 
-.cart-button {
-    position: fixed;
-    bottom: 1vh;
-    left: 16px;
-    right: 16px;
-    background-color: var(--primary-color);
-    color: white !important;
-    padding: 12px;
-    margin: 0 16px;
-    border-radius: 25px;
-    text-align: center;
-    z-index: 1000;
-    cursor: pointer;
-}
-
 .restaurant-header img {
     object-fit: cover;
     height: 35vh;
     width: 100%;
-}
-
-.restaurant-info img {
-    object-fit: cover;
-}   
+}  
 
 .restaurant-image {
     position: relative;
@@ -60,16 +41,31 @@ body.noscroll {
     height: 120px;
     object-fit: scale-down;
     background-color: white;
-    border: 1px solid var(--medium-gray);
     border-radius: 8px;
     position: absolute;
-    top: 30%;   
+    top: 30%;
+    
 }
 
 .restaurant-info-details {
     display: flex;
     gap: 16px;
     flex-wrap: wrap;
+    align-items: center;
+}
+
+.restaurant-info-details img{
+    position: relative;
+    height: 32px;
+    width: 32px;
+    background-color: #f9f9f9;
+}
+
+.restaurant-info-details-flex{
+    display: flex;
+    gap:4px;
+    justify-content: center;
+    align-items: center;
 }
 
 .restaurant-details {
@@ -182,7 +178,7 @@ main {
 
 .item-description {
     color: var(--dark-gray);
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 10px;
     height: 40px;
     overflow: hidden;
@@ -215,7 +211,7 @@ main {
 
 .cart-contents {
     overflow-y: auto;
-    max-height: 77vh;
+    max-height: 984px;
 }
 
 .close-cart {
@@ -308,7 +304,7 @@ main {
     width: 100%;
     background-color: #F5F3F1;
     border: 1px solid var(--medium-gray);
-    padding: 36px;
+    padding: 5vh;
 }
 
 .shopping-cart-panel-responsiv {
